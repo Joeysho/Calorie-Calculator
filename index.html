@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calore Calculator</title>
+  </head>
+  <body>
+    <h1 class="hidden-deeper" id="results-head">Results</h1>
+    <section class="hidden-deeper" id="results">
+      <h3 class="space">Maintain weight<span class="s1">value goes here</span></h3>
+      <p class="sub"></p>
+      <h3>Mild weight loss<span class="s2">value goes here</span></h3>
+      <p class="sub">0.5 lb/week</p>
+      <h3>Weight loss<span class="s3">value goes here</span></h3>
+      <p class="sub">1 lb/week</p>
+      <h3>Extreme weight loss<span class="s4">value goes here</span></h3>
+      <p class="sub">2 lb/week</p>
+    </section>
+    <h1 id="head">Calorie Calculator</h1>
+    <section id="calculator">
+      <div class="age-container">
+        <label id="age-label" for="age">Age:</label>
+        <input
+          value="25"
+          type="number"
+          id="age"
+          class="inline"
+          placeholder="Age"
+          required
+        />
+        <div class="age-error hidden">Age must be 15-80!</div>
+      </div>
+
+      <div class="gender-container">
+        <p class="gender">Gender:</p>
+        <label id="gender-male" for="male">
+          <input checked class="inline" type="radio" id="male" name="gender" />
+          Male
+        </label>
+        <label id="gender-female" for="female">
+          <input class="inline" type="radio" id="female" name="gender" /> Female
+        </label>
+        <div class="gender-error hidden">Gender not selected!</div>
+      </div>
+
+      <div class="height-container">
+        <label id="height-label" for="feet inches">Height:</label>
+        <input
+          value="5"
+          type="number"
+          id="feet"
+          class="inline"
+          placeholder="Feet"
+          required
+        />
+        <input
+          value="10"
+          type="number"
+          id="inches"
+          class="inline"
+          placeholder="Inches"
+          required
+        />
+        <div class="feet-error hidden">Feet must be 2-9!</div>
+        <div class="inches-error hidden">Inches must be 0-11!</div>
+      </div>
+
+      <div class="weight-container">
+        <label id="weight-label" for="weight">Weight:</label>
+        <input
+          value="160"
+          type="number"
+          id="weight"
+          class="inline"
+          placeholder="lbs"
+          required
+        />
+        <div class="inches-error2 hidden">Inches must be 0-11!</div>
+        <div class="weight-error hidden">Weight must be 30-1500!</div>
+      </div>
+
+      <div class="activity-container">
+        <label>Activity</label>
+        <select id="dropdown">
+          <!-- <option selected="true" disabled>Select Current Role</option> -->
+          <option value="1">Sedentary: little or no exercise</option>
+          <option value="2">Light: exercise 1-3 times a week</option>
+          <option value="3">Moderate: exercise 4-5 times a week</option>
+          <option value="4">
+            Active: daily exercise or intense exercise 3-4 times/week
+          </option>
+          <option value="5">
+            Very Active: intense exercise 6-7 times/week
+          </option>
+        </select>
+        <ul>
+          <li>
+            <strong>Exercise:</strong> 15-30 minutes of elevated heart rate
+            activity
+          </li>
+          <li>
+            <strong>Intense exercise:</strong> 45-120 minutes of elevated heart
+            rate activity.
+          </li>
+        </ul>
+      </div>
+      <br />
+      <div class="buttons-container"></div>
+      <button class="button-42" id="btn-calculate">Calculate</button>
+      <button class="button-43" id="btn-clear">Clear</button>
+    </section>
+    <div>
+      <button class="button-44" id="btn-goback">Go back</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
